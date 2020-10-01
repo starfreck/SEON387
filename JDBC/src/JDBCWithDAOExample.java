@@ -8,7 +8,7 @@ public class JDBCWithDAOExample {
     public static void main(String[] args) {
 
             // Create com.example.daoimpl.UserDaoImpl Obj to perform actions on user_details table
-            UserDaoImpl userDAO = new UserDaoImpl();
+            UserDaoImpl userImpl = new UserDaoImpl();
 
 
             // 1. Create a new com.example.model.User and Store in DB
@@ -22,28 +22,28 @@ public class JDBCWithDAOExample {
             u1.setStatus(0); // Keep com.example.model.User active by default
 
             // Store user in DB
-            if(userDAO.insertUser(u1)){
+            if(userImpl.insertUser(u1)){
                 System.out.println("The new user with username "+u1.getUsername()+" is successfully stored.");
             }
 
             // 2. Update newly Created com.example.model.User
             // Update Username of John
             u1.setUsername("jo_doe");
-            if(userDAO.updateUser(u1)){
+            if(userImpl.updateUser(u1)){
                 System.out.println("The user with id "+u1.getUserId()+" is successfully updated.");
             }
 
             //3. Find user by id
-            User u2 = userDAO.getUser(1);
+            User u2 = userImpl.getUser(1);
             System.out.println("The username with user_id 1 is "+u2.getUsername());
 
             // Delete com.example.model.User
-            if(userDAO.deleteUser(2)){
+            if(userImpl.deleteUser(2)){
                 System.out.println("The user with user_id 2 is successfully deleted.");
             }
 
             // Get All Users
-            Set<User> users= userDAO.getAllUsers();
+            Set<User> users= userImpl.getAllUsers();
             System.out.println();
             for (User u:users) {
                 System.out.println(u.getUsername());
