@@ -18,4 +18,15 @@
         <url-pattern>/StoreServlet</url-pattern>
     </servlet-mapping>
 
+
+    <servlet>
+        <servlet-name>StoreWithDAOServlet</servlet-name>
+        <servlet-class>StoreWithDAOServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>StoreWithDAOServlet</servlet-name>
+        <url-pattern>/StoreWithDAOServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>

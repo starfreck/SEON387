@@ -1,11 +1,14 @@
-import com.example.dao.DAO;
+package com.example.daoimpl;
+
+import com.example.dao.UserDAO;
+import com.example.db.DBConnection;
 import com.example.model.User;
 
 import java.sql.*;
 import java.util.HashSet;
 import java.util.Set;
 
-public class UserDAO implements DAO {
+public class UserDaoImpl implements UserDAO {
 
     @Override
     public User getUser(int id) {

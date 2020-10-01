@@ -1,3 +1,5 @@
+package com.example.db;
+
 import java.sql.*;
 
 public class DBConnection {

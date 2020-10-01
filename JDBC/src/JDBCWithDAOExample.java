@@ -1,3 +1,4 @@
+import com.example.daoimpl.UserDaoImpl;
 import com.example.model.User;
 
 import java.util.Set;
@@ -6,8 +7,8 @@ public class JDBCWithDAOExample {
 
     public static void main(String[] args) {
 
-            // Create UserDAO Obj to perform actions on user_details table
-            UserDAO userDAO = new UserDAO();
+            // Create com.example.daoimpl.UserDaoImpl Obj to perform actions on user_details table
+            UserDaoImpl userDAO = new UserDaoImpl();
 
 
             // 1. Create a new com.example.model.User and Store in DB
