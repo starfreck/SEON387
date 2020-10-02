@@ -19,7 +19,7 @@ public class JDBCWithDAOExample {
             u1.setLastName("Doe");
             u1.setGender("Male");
             u1.setPassword("$password$");  // TODO: Encrypt your password before passing here {Good practice ;)}
-            u1.setStatus(0); // Keep com.example.model.User active by default
+            u1.setStatus(1); // Keep com.example.model.User active by default
 
             // Store user in DB
             if(userImpl.insertUser(u1)){

@@ -22,15 +22,16 @@ public class UserDaoImpl implements UserDAO {
 
             if(rs.next())
             {
-                //com.example.model.User user = new com.example.model.User();
-                //user.setUserId( rs.getInt("id") );
-                //user.setUsername( rs.getString("username") );
-                //user.setFirstName( rs.getString("first_name") );
-                //user.setLastName( rs.getString("Last_name") );
-                //user.setPassword( rs.getString("pass") );
-                //user.setGender( rs.getString("age") );
-                //user.getStatus( rs.getInt("status") );
-                //return user;
+                //com.example.model.User
+//                user = new User();
+//                user.setUserId( rs.getInt("id") );
+//                user.setUsername( rs.getString("username") );
+//                user.setFirstName( rs.getString("first_name") );
+//                user.setLastName( rs.getString("Last_name") );
+//                user.setPassword( rs.getString("pass") );
+//                user.setGender( rs.getString("age") );
+//                user.getStatus( rs.getInt("status") );
+//                return user;
 
                 // It's more convenient to make a separate method to extract user data from result set as we'd use it in many methods.
                 return extractUserFromResultSet(rs);
@@ -111,7 +112,6 @@ public class UserDaoImpl implements UserDAO {
                 try (ResultSet generatedKeys = ps.getGeneratedKeys()) {
                     if (generatedKeys.next()) {
                         // generatedKeys() checkout this method it's doing interesting job
-                        System.out.println(generatedKeys.getInt(1));
                         user.setUserId(generatedKeys.getInt(1));
                     }
                     else {

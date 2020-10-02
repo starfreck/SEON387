@@ -1,3 +1,5 @@
+import com.example.db.DBConnection;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,7 +27,7 @@ public class StoreServlet extends HttpServlet {
         try {
 
             // Initialize the database
-            Connection con = DBConnection.initializeDatabase();
+            Connection con = DBConnection.getConnection();
 
             // SQL query
             String query = "insert into user_details (username,first_name,last_name,gender,password,status) values(?, ?, ?, ?, ?, ?)";

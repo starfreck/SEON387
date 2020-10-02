@@ -35,14 +35,12 @@ public class JDBCExample {
 
                 // Retrieve by column name
                 int id              = rs.getInt("user_id");
-                String username     = rs.getString("first");
-                String firstName    = rs.getString("first");
-                String lastName     = rs.getString("last");
-                String gender       = rs.getString("last");
+                String firstName    = rs.getString("first_name");
+                String lastName     = rs.getString("last_name");
+                String gender       = rs.getString("gender");
 
                 //Display values
                 System.out.print("ID: " + id);
-                System.out.print(", Username: " + username);
                 System.out.print(", First name: " + firstName);
                 System.out.println(", Last name: " + lastName);
                 System.out.println(", Gender: " + gender);

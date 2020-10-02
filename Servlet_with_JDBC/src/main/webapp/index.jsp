@@ -19,6 +19,7 @@
 <div class="row">
     <div class="col-md-12">
         <a href="signup.jsp">Sign up (Without DAO)</a>
+        <br>
         <a href="signupWithDAO.jsp">Sign up (With DAO)</a>
     </div>
 </div>
