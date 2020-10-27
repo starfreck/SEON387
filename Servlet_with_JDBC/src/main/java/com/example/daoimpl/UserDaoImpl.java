@@ -204,7 +204,7 @@ public class UserDaoImpl implements UserDAO {
         user.setUsername( rs.getString("username") );
         user.setFirstName( rs.getString("first_name") );
         user.setLastName( rs.getString("last_name") );
-        user.setPassword( rs.getString("password") );
+        // user.setPassword( rs.getString("password") );
         user.setGender( rs.getString("gender") );
         user.setStatus( rs.getInt("status") );
 

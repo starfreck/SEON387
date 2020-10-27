@@ -64,8 +64,12 @@ public class User {
         this.gender = gender;
     }
 
-    public String getPassword() {
-        return password;
+    public boolean verifyPassword(String password) {
+
+        if(this.password.equals(password)){
+         return true;
+        }
+        return false;
     }
 
     public void setPassword(String password) {
